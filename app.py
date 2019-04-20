@@ -15,9 +15,7 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'gerald'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+
 
 # use this line of code to change the auth endpoint URL
 #app.config['JWT_AUTH_URL_RULE'] = '/login'
